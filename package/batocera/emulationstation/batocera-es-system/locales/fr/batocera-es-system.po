@@ -3995,6 +3995,11 @@ msgctxt "game_options"
 msgid "OpenGL"
 msgstr ""
 
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "GLCore"
+msgstr ""
+
 #. TRANSLATION: libretro, cemu, daphne, dolphin, duckstation, ...
 msgctxt "game_options"
 msgid "Vulkan"
@@ -4018,6 +4023,16 @@ msgstr ""
 #. TRANSLATION: libretro
 msgctxt "game_options"
 msgid "Improves performance at the cost of latency and more video stuttering."
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "CONTROLLER TO LIGHTGUN"
+msgstr ""
+
+#. TRANSLATION: libretro
+msgctxt "game_options"
+msgid "Map controller inputs to lightgun inputs"
 msgstr ""
 
 #. TRANSLATION: cannonball

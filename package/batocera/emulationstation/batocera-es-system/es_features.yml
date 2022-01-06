@@ -56,6 +56,7 @@ libretro:
       description: Choose which graphics API library to use. Vulkan is better, when supported.
       choices:
         "OpenGL": opengl
+        "GLCore": glcore
         "Vulkan": vulkan
     audio_latency:
       prompt:      AUDIO LATENCY
@@ -74,7 +75,12 @@ libretro:
         choices:
             "On":   "true"
             "Off":  "false"
-
+    lightgun_map:
+        prompt:      CONTROLLER TO LIGHTGUN
+        description: Map controller inputs to lightgun inputs
+        choices:
+            "On":   "true"
+            "Off":  "false"
   cores:
     '81':
       features: [netplay, rewind, autosave, padtokeyboard]

@@ -7,6 +7,7 @@ from Emulator import Emulator
 import settings
 from settings.unixSettings import UnixSettings
 import json
+import subprocess
 from utils.logger import get_logger
 from PIL import Image, ImageOps
 import utils.bezels as bezelsUtil
@@ -89,8 +90,30 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
     # Basic configuration
     retroarchConfig['quit_press_twice'] = 'false'               # not aligned behavior on other emus
     retroarchConfig['menu_show_restart_retroarch'] = 'false'    # this option messes everything up on Batocera if ever clicked
-    retroarchConfig['video_driver'] = '"gl"'                    # needed for the ozone menu
-    retroarchConfig['audio_latency'] = '64'                     #best balance with audio perf
+
+    try:
+        glxCmd = 'glxinfo | grep "OpenGL version"'
+        glOutput = subprocess.check_output(glxCmd, shell=True).decode(sys.stdout.encoding)    
+        glString = glOutput.split()
+        glVersion = float(glString[3])        
+    except:
+        glVersion = 1
+    if glVersion >= 3.1:
+        defaultGFXDriver = "glcore"
+    else:
+        defaultGFXDriver = "gl"
+
+    if system.isOptSet("gfxbackend"):
+        if system.config["gfxbackend"] == "vulkan":
+            retroarchConfig['video_driver'] = '"vulkan"'
+        elif system.config["gfxbackend"] == "glcore":
+            retroarchConfig['video_driver'] = '"glcore"'
+        elif system.config["gfxbackend"] == "opengl":
+            retroarchConfig['video_driver'] = '"gl"'
+    else:
+        retroarchConfig['video_driver'] = '"' + defaultGFXDriver + '"'  # needed for the ozone menu
+
+    retroarchConfig['audio_latency'] = '64'                     # best balance with audio perf
     if (system.isOptSet("audio_latency")):
         retroarchConfig['audio_latency'] = system.config['audio_latency']
 
@@ -110,8 +133,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
     else:
         retroarchConfig['video_rotation'] = '0'
 
-    if system.isOptSet("gfxbackend") and system.config["gfxbackend"] == "vulkan":
-        retroarchConfig['video_driver'] = '"vulkan"'
+    
 
     if system.isOptSet('video_threaded') and system.getOptBoolean('video_threaded') == True:
         retroarchConfig['video_threaded'] = 'true'
@@ -405,7 +427,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
             retroarchConfig['video_aspect_ratio_auto'] = 'false'
         else:
             retroarchConfig['video_aspect_ratio_auto'] = 'true'
-            retroarchConfig['aspect_ratio_index'] = ''
+            retroarchConfig['aspect_ratio_index'] = '22'
 
     # Rewind option
     retroarchConfig['rewind_enable'] = 'false'
@@ -582,6 +604,7 @@ def createLibretroConfig(system, controllers, rom, bezel, gameResolution):
         retroarchConfig['menu_widget_scale_factor_windowed'] = '2.0000'
     else:
         retroarchConfig['video_font_size'] = '32'
+        retroarchConfig['menu_widget_scale_auto'] = 'true'
         # don't force any so that the user can choose
         #retroarchConfig['menu_driver'] = 'ozone'
         # force the assets directory while it was wrong in some beta versions
