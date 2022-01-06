@@ -1,18 +1,12 @@
 
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-n
->package/batocera/kodi/kodi19-resource-language-fr_fr/Config.in,b/e/be2941bc37848c3562cf19b20cdcc1de89916fdb
-9
-	Config.in,5/5/5552b5e1195d831c3296baaf1816cee11066fde3
 `
 0package/batocera/kodi/kodi-pvr-freebox/Config.in,4/e/4e7ad5127b9b47f9be6f68e7fa0301ff50399f33
 l
 <package/batocera/kodi/kodi-pvr-freebox/kodi-pvr-freebox.hash,0/8/08035ec0295e69d311a34e7a3506cbc84f11ed3b
 j
 :package/batocera/kodi/kodi-pvr-freebox/kodi-pvr-freebox.mk,c/0/c00b0600529bc5aa525857b727d6a18bf748573b
-;
-external.mk,7/c/7c569f0ac721b82f2251a7f3f084481d2a572c21
 B
 buildroot/Makefile,7/6/7672acdaa61142bdbdc3478d62bcafad677604b3
 c
@@ -21,8 +15,6 @@ c
 Tpackage/batocera/kodi/kodi19-resource-language-fr_fr/kodi_resource_language_fr_fr.mk,5/7/57311a7ff44645d2eb8c36b6c5569ca9bed8175d
 _
 /package/batocera/emulators/lightspark/Config.in,5/0/505ad00a4c1d89fed0abfb348dacff726aa0ffa5
-L
-package/hyperion/hyperion.mk,b/b/bb10577656e1aa45a0212307b53b93065cb2caae
 R
 "buildroot/package/pcre2/pcre2.hash,1/f/1f444343703a75c07d5beaba0144df8133c6eec9
 N
@@ -31,9 +23,6 @@ P
  buildroot/package/pcre/pcre.hash,2/c/2c5fed89ea4d2c12d17ff12d6c22e9a0665f5745
 P
  buildroot/package/pcre/Config.in,b/0/b01b30c5678bf9746632366d146fc2cbe06ad7f5
-:
-
-Dockerfile,6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 n
 >board/batocera/rockchip/rk3399/linux_patches/rock960-dts.patch,5/d/5d69abc6dea78296a04b1f46576af5dba06d3bb0
 n
@@ -41,14 +30,30 @@ n
 C
 buildroot/Config.in,a/7/a7e084a535cce4f9a2fe52f00a65d1dda6b54b68
 Q
-!configs/batocera-rk3399_defconfig,f/1/f143bceaa60752a5f643b206ca81b488eb101643
-Q
 !buildroot/package/pcre2/Config.in,8/9/89128cc54bb10c20d2edd3381d71c0a70b12fb65
 X
 (buildroot/package/qt5/qt5base/qt.conf.in,b/e/be456d12a0e0a6972ef15cfaee002aa3ee68cc7c
 D
 buildroot/.defconfig,9/1/91465b980a6f21e9056edd940fa962991ff5b28e
-8
-Makefile,8/3/836efb6e25a091dcb4ff8e1dbb2f0be6a5cbf14c
 P
  buildroot/package/pcre2/pcre2.mk,c/4/c446de7a794daafc4f2d75d7ac58de388d8aa703
+X
+(buildroot/package/qt5/qt5tools/Config.in,9/a/9a44e47ae7b45026400e9375a43496a203653e36
+L
+package/hyperion/hyperion.mk,b/b/bb10577656e1aa45a0212307b53b93065cb2caae
+8
+Makefile,8/3/836efb6e25a091dcb4ff8e1dbb2f0be6a5cbf14c
+D
+batocera.mk.template,7/e/7e7652c807942b0ac85f57d6e1e2a2b5b7f5066c
+9
+	Config.in,5/5/5552b5e1195d831c3296baaf1816cee11066fde3
+;
+external.mk,7/c/7c569f0ac721b82f2251a7f3f084481d2a572c21
+n
+>package/batocera/kodi/kodi19-resource-language-fr_fr/Config.in,b/e/be2941bc37848c3562cf19b20cdcc1de89916fdb
+Q
+!buildroot/package/avahi/Config.in,f/3/f3c35874f2978893b02530b98f088728c456b8f5
+R
+"buildroot/package/flatcc/Config.in,4/c/4cbba4121e040ab5fd40dc1fd812964d921e9ee5
+R
+"buildroot/package/flatcc/flatcc.mk,9/e/9ee3b2dc1e8a1dcd4e28e3bf5fa425fe7606d307
