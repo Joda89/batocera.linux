@@ -19,7 +19,7 @@ HYPERION_CONF_OPTS += -DCMAKE_PREFIX_PATH=$(STAGING_DIR) \
 	-DENABLE_DEPLOY_DEPENDENCIES=OFF \
 	"$(@D)/"
 
-HYPERION_DEPENDENCIES += libusb host-libusb host-protobuf host-cmake qt5base qt5serialport flatbuffers protobuf libcec avahi jpeg-turbo
+HYPERION_DEPENDENCIES += libusb host-libusb host-protobuf host-cmake qt5base qt5serialport qt5svg flatbuffers protobuf libcec avahi jpeg-turbo
 
 # rpi0, 1, 2 and 3
 ifeq ($(BR2_PACKAGE_RPI_USERLAND),y)
@@ -27,7 +27,7 @@ HYPERION_DEPENDENCIES += rpi-userland
 endif
 
 define HYPERION_INSTALL_LIBS
-	$(INSTALL) -D -m 0755 $(@D)/lib/*a $(TARGET_DIR)/usr/lib
+	$(INSTALL) -D -m 0755 $(@D)/lib/*.a $(TARGET_DIR)/usr/lib
 endef
 HYPERION_POST_INSTALL_TARGET_HOOKS += HYPERION_INSTALL_LIBS
 

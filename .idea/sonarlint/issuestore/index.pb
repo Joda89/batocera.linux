@@ -24,8 +24,6 @@ P
 P
  buildroot/package/pcre/Config.in,b/0/b01b30c5678bf9746632366d146fc2cbe06ad7f5
 n
->board/batocera/rockchip/rk3399/linux_patches/rock960-dts.patch,5/d/5d69abc6dea78296a04b1f46576af5dba06d3bb0
-n
 >board/batocera/rockchip/rk3399/linux-defconfig-fragment.config,d/8/d8ddb1212ee38c22ccc1ce6730f45783038778cb
 C
 buildroot/Config.in,a/7/a7e084a535cce4f9a2fe52f00a65d1dda6b54b68
@@ -37,8 +35,6 @@ D
 buildroot/.defconfig,9/1/91465b980a6f21e9056edd940fa962991ff5b28e
 P
  buildroot/package/pcre2/pcre2.mk,c/4/c446de7a794daafc4f2d75d7ac58de388d8aa703
-X
-(buildroot/package/qt5/qt5tools/Config.in,9/a/9a44e47ae7b45026400e9375a43496a203653e36
 L
 package/hyperion/hyperion.mk,b/b/bb10577656e1aa45a0212307b53b93065cb2caae
 8
